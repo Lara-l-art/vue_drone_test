@@ -1,0 +1,76 @@
+.wings {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+
+  position: absolute;
+  top: 0;
+  right: -65px;
+  width: 200px;
+  height: 170px;
+
+  &__part {
+    animation: wings-rotate 0.5s linear infinite;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 30px;
+      height: 3px;
+
+      border-radius: 50%;
+      background-color: black;
+    }
+
+    &:after {
+      display: block;
+      position: relative;
+      top: -3px;
+      content: "";
+      width: 30px;
+      height: 3px;
+
+      transform: rotate(-90deg);
+      border-radius: 50%;
+      background-color: black;
+    }
+  }
+}
+
+.one {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: start;
+}
+
+.two {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+}
+
+.three {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  align-self: end;
+}
+
+.four {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: end;
+}
+
+@keyframes wings-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}

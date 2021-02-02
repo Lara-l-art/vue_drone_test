@@ -1,0 +1,44 @@
+.drone {
+  position: relative;
+  width: 70px;
+  height: 130px;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+.drone__body {
+  position: relative;
+  width: 70px;
+  height: 170px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+.drone__body-left {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: #6D6D6D;
+  border-radius: 10px;
+}
+.drone__body-right {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: #bfbdbd;
+  border-radius: 10px;
+}
+.drone__body-triangle-top {
+  position: absolute;
+  top: 0;
+  border: 35px solid transparent;
+  border-top: 35px solid #6D6D6D;
+  border-radius: 10px;
+}
+.drone__body-triangle-bottom {
+  position: absolute;
+  bottom: 0;
+  border: 35px solid transparent;
+  border-bottom: 35px solid #bfbdbd;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=DroneBody.css.map */

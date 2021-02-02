@@ -1,0 +1,52 @@
+.drone {
+  position: relative;
+  width: 70px;
+  height: 130px;
+
+  transform: translate(-50%, -50%);
+  transition: 1s;
+
+  &__body {
+    position: relative;
+    width: 70px;
+    height: 170px;
+
+    box-sizing: border-box;
+    border-radius: 30px;
+
+    &-left {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      background-color: #6D6D6D;
+      border-radius: 10px;
+    }
+
+    &-right {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      background-color: #bfbdbd;
+      border-radius: 10px;
+    }
+
+    &-triangle-top {
+      position: absolute;
+      top: 0;
+
+      border: 35px solid transparent;
+      border-top: 35px solid #6D6D6D;
+      border-radius: 10px;
+    }
+
+    &-triangle-bottom {
+      position: absolute;
+      bottom: 0;
+
+      border: 35px solid transparent;
+      border-bottom: 35px solid #bfbdbd;
+      border-radius: 10px;
+    }
+  }
+}
+

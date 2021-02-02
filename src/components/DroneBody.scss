@@ -1,51 +1,63 @@
-.drone {
+$droneHeight: 170px;
+$droneWidth: 70px;
+$darkGrey: #6D6D6D;
+$lightGrey: #bfbdbd;
+
+@mixin body-part {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@mixin triangle {
+  position: absolute;
+  border: 35px solid transparent;
+  border-radius: 10px;
+}
+
+@mixin drone-parameters {
   position: relative;
-  width: 70px;
-  height: 130px;
+  width: $droneWidth;
+  height: $droneHeight;
+}
+
+.drone {
+  @include drone-parameters;
 
   transform: translate(-50%, -50%);
   transition: 1s;
 
   &__body {
-    position: relative;
-    width: 70px;
-    height: 170px;
+    @include drone-parameters;
 
     box-sizing: border-box;
     border-radius: 30px;
 
     &-left {
-      display: inline-block;
-      width: 50%;
-      height: 100%;
-      background-color: #6D6D6D;
-      border-radius: 10px;
+      @include body-part;
+
+      background-color: $darkGrey;
     }
 
     &-right {
-      display: inline-block;
-      width: 50%;
-      height: 100%;
-      background-color: #bfbdbd;
-      border-radius: 10px;
+      @include body-part;
+
+      background-color: $lightGrey;
     }
 
     &-triangle-top {
-      position: absolute;
-      top: 0;
+      @include triangle;
 
-      border: 35px solid transparent;
-      border-top: 35px solid #6D6D6D;
-      border-radius: 10px;
+      top: 0;
+      border-top: 35px solid $darkGrey;
     }
 
     &-triangle-bottom {
-      position: absolute;
-      bottom: 0;
+      @include triangle;
 
-      border: 35px solid transparent;
-      border-bottom: 35px solid #bfbdbd;
-      border-radius: 10px;
+      bottom: 0;
+      border-bottom: 35px solid $lightGrey;
     }
   }
 }

@@ -1,3 +1,13 @@
+@mixin valve {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+
 .wings {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -13,26 +23,16 @@
     animation: wings-rotate 0.5s linear infinite;
 
     &:before {
-      display: block;
-      content: "";
-      width: 30px;
-      height: 3px;
-
-      border-radius: 50%;
-      background-color: black;
+      @include valve;
     }
 
     &:after {
-      display: block;
+      @include valve;
+
       position: relative;
       top: -3px;
-      content: "";
-      width: 30px;
-      height: 3px;
-
       transform: rotate(-90deg);
-      border-radius: 50%;
-      background-color: black;
+
     }
   }
 }

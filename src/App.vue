@@ -25,7 +25,7 @@ export default {
     moveDrone(event) {
       const area = document.querySelector('.drone-field');
       const areaCoords = area.getBoundingClientRect();
-      this.positionTop = event.clientY - areaCoords.top - area.clientTop - 70;
+      this.positionTop = event.clientY - areaCoords.top - area.clientTop - 60;
       this.positionLeft = event.clientX - areaCoords.left - area.clientLeft;
     },
   },
